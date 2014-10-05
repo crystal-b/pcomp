@@ -7,7 +7,8 @@ void setup() {
   size(600, 600);
   smooth();
   //initialize object by calling in a constructor
-  myMaze = new Block(0,0);
+  //changed original x loc to get full block width
+  myMaze = new Block(50,0);
   //initialize 2nd object and change x variable to change location
   myMaze2 = new Block(500,0);
 }
