@@ -1,17 +1,23 @@
 //declare object as global variable
 Block myMaze;
+//declare 2nd object
+Block myMaze2;
 
 void setup() {
   size(600, 600);
   smooth();
   //initialize object by calling in a constructor
   myMaze = new Block(0,0);
+  //initialize 2nd object and change x variable to change location
+  myMaze2 = new Block(500,0);
 }
 
 void draw() {
   background(255);
   //call the object
   myMaze.drawBlock();
+  //call 2nd object
+  myMaze2.drawBlock();
 }
 
 class Block {
