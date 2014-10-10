@@ -41,9 +41,9 @@ void draw(){
 }
  
  
-class circle{
-   
-   
+class circle {
+ 
+  
   // variables
   float xpos;
   float ypos;
@@ -51,40 +51,41 @@ class circle{
   float yspd;
   float grav;
   color col;
-  float lifetime;
-   
+  float lifeTime;
+ 
   // constructor
-  circle(){
+  circle() {
     xpos = mouseX;
     ypos = mouseY;
-    xspd = mouseX - pmouseX + random(-5,5);
+    xspd = mouseX - pmouseX + random(-3, 3);
     yspd = mouseY - pmouseY;
-    grav = .5;
-    col = color( random(250), random(250), random(250) );
-    lifetime = 250 + random(-40, 40);
+ 
+    grav = 1;
+    //col = color( random(250), random(250), random(250) );
+    col = color( colorCircle, random(250), random(250) );
+    lifeTime = 250 + random(-30, 30);
+  }
+ 
+  // functions (methods)
+  void move() {
+    xpos = xpos + xspd;
+    yspd = yspd + grav;
+    lifeTime = lifeTime - 4;
   }
    
-  // functions (methods)
-  void move(){
-   xpos = xpos + xspd;
-   ypos = ypos + yspd;
-   yspd = yspd + grav;
-   lifetime = lifetime - 4;
+  void display(){
+    fill( red(col), green(col), blue(col), lifeTime );
+    ellipse(xpos, ypos, 50, 50);
   }
- 
-   void display(){
-     fill ( red(col), green(col), blue(col), lifetime );
-     ellipse(xpos, ypos, 47, 47);
-   }
-    
+   
   void bounce(){
-   if( ypos > height){
-     yspd = -.7*abs(yspd);
-   }
-  }
+    if( ypos > height){
+      yspd = -.7*abs(yspd);
+    }
+  } 
 }
- 
- 
+
+
 class square{
    
    
