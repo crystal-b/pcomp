@@ -11,8 +11,8 @@ class circle{
   float spacing = 20;
   // constructor
   circle(){
-    xpos = mouseX;
-    ypos = mouseY;
+    xpos = mouseX - 50;
+    ypos = mouseY + 30;
     //xspd = mouseX - pmouseX + random(-4, 4);
     //yspd = mouseY - pmouseY;
     grav= 0.89;
@@ -31,30 +31,30 @@ class circle{
    
   void display(){
     fill(red(col), green(col), blue(col), lifeTime);
-    ellipse(xpos, ypos, 10, 50);
+    ellipse(xpos, ypos, 10, 15);
   }
  
  void display2(){
     fill(red(col), green(col), blue(col), lifeTime);
-    ellipse(xpos+6, ypos, 10, 50);
+    ellipse(xpos+spacing, ypos, 10, 15);
   }
  
   void display3(){
     fill(red(col), green(col), blue(col), lifeTime);
-    ellipse(xpos+12, ypos, 10, 50);
+    ellipse(xpos+spacing*1.5, ypos, 10, 15);
   }
  
   void display4(){
     fill(red(col), green(col), blue(col), lifeTime);
-    ellipse(xpos+18, ypos, 10, 50);
+    ellipse(xpos+spacing*2, ypos, 10, 15);
   }
   void display5(){
     fill(red(col), green(col), blue(col), lifeTime);
-    ellipse(xpos+24, ypos, 10, 50);
+    ellipse(xpos+spacing*2.5, ypos, 10, 15);
   }
    void display6(){
     fill(red(col), green(col), blue(col), lifeTime);
-    ellipse(xpos+30, ypos, 10, 50);
+    ellipse(xpos+spacing*3, ypos, 10, 15);
   }
  void bounce(){
     if(ypos > height){
