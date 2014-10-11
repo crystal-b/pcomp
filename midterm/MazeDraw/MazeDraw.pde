@@ -1,7 +1,11 @@
+/*
 //declare object as global variable
 Block myMaze;
 //declare 2nd object
 Block myMaze2;
+*/
+//declare array for x positions
+int[] xpos
 
 void setup() {
   size(600, 600);
@@ -10,7 +14,7 @@ void setup() {
   //changed original x loc to get full block width
   myMaze = new Block(50,0);
   //initialize 2nd object and change x variable to change location
-  myMaze2 = new Block(500,0);
+  myMaze2 = new Block(150,0);
 }
 
 void draw() {
