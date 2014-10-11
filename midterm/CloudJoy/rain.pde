@@ -8,10 +8,11 @@ class circle{
   float yspd;
   float grav;
   color col;
+  float spacing = 20;
   // constructor
   circle(){
-    xpos = xPos;
-    ypos = yPos;
+    xpos = mouseX;
+    ypos = mouseY;
     //xspd = mouseX - pmouseX + random(-4, 4);
     //yspd = mouseY - pmouseY;
     grav= 0.89;
