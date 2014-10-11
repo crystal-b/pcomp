@@ -31,7 +31,8 @@ void setup()
 void draw()
 {
    
-  colorMode(HSB,360,100,100);
+  //colorMode(HSB,360,100,100);
+  
   background(238,72,95);
   noStroke();
   
@@ -103,12 +104,13 @@ println("Im in Serial event - Port: "+myPort);
 //CRYSTAL: PLAYING WITH CLOUD BREATHING
 void createCloud()
 {
-  fill(255,255,cloudColor);
+  fill(217,210,201);
   ellipse(mouseX,mouseY,50,50);
-  fill(255,cloudColor,255); 
+  fill(217,210,201); 
   ellipse(mouseX+3,mouseY+15,50,50);
-  fill(cloudColor,255,255);
   ellipse(mouseX-18,mouseY-18,50,50);
+  fill(/*cloudColor*/169,156,146);
+  
   ellipse(mouseX-28,mouseY+15,50,50);
   ellipse(mouseX-25,mouseY+15,50,50);
   ellipse(mouseX+15,mouseY+15,50,50);
