@@ -9,6 +9,7 @@ ArrayList <circle> circles;
 
 
 //CRYSTAL: PLAYING WITH CLOUD BREATHING
+float m = second();
 
 //import ddf.minim.*;
 
@@ -42,7 +43,13 @@ void draw()
   background(0); 
   background(60,72,95);
   }
+  
+  //testing cloud breath
+  if (m%2 == 0)
   createCloud();
+  else
+  createCloud2();
+
   
   //Making rain
   for(int i = 0; i < circles.size(); i = i + 1){
@@ -117,6 +124,24 @@ void createCloud()
   ellipse(mouseX+10,mouseY-11,50,50);
   ellipse(mouseX-55,mouseY+5,50,50);
 }
+
+//CRYSTAL: PLAYING WITH CLOUD BREATHING
+void createCloud2()
+{
+  fill(217,210,201);
+  ellipse(mouseX,mouseY,30,30);
+  fill(217,210,201); 
+  ellipse(mouseX+3,mouseY+15,30,30);
+  ellipse(mouseX-18,mouseY-18,30,30);
+  fill(/*cloudColor*/169,156,146);
+  
+  ellipse(mouseX-28,mouseY+15,30,30);
+  ellipse(mouseX-25,mouseY+15,30,30);
+  ellipse(mouseX+15,mouseY+15,30,30);
+  ellipse(mouseX+10,mouseY-11,30,30);
+  ellipse(mouseX-55,mouseY+5,30,30);
+}
+
 
 //
 //void createRain()
