@@ -7,9 +7,9 @@ float thunderStrike;
 float cloudColor;
 ArrayList <circle> circles;
 
-
-//CRYSTAL: PLAYING WITH CLOUD BREATHING
-//int cloudHeight = 45;
+//CRYSTAL PLAYING WITH CLOUD BREATH
+//http://cs.smith.edu/dftwiki/index.php/Creating_a_trail_of_moving_object_in_Processing
+float radius = 80 + 40 * sin( frameCount * 0.05f );
   
 
 //import ddf.minim.*;
@@ -31,12 +31,7 @@ void setup()
 
 
 void draw()
-{
-  //CRYSTAL PLAYING WITH CLOUD BREATH
-  //http://cs.smith.edu/dftwiki/index.php/Creating_a_trail_of_moving_object_in_Processing
-  //float radius = 80 + 40 * sin( frameCount * 0.05f );
-
-   
+{  
   //colorMode(HSB,360,100,100);
   
   background(238,72,95);
