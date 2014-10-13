@@ -7,11 +7,6 @@ float thunderStrike;
 float cloudColor;
 ArrayList <circle> circles;
 
-//CRYSTAL PLAYING WITH CLOUD BREATH
-//http://cs.smith.edu/dftwiki/index.php/Creating_a_trail_of_moving_object_in_Processing
-float radius = 80 + 40 * sin( frameCount * 0.05f );
-  
-
 //import ddf.minim.*;
 
 void setup()
@@ -103,12 +98,14 @@ println("Im in Serial event - Port: "+myPort);
   }
 }
 
-//CRYSTAL: PLAYING WITH CLOUD BREATHING
+
 void createCloud()
 {
-  
   //CRYSTAL PLAYING WITH CLOUD BREATH
   //http://cs.smith.edu/dftwiki/index.php/Creating_a_trail_of_moving_object_in_Processing
+  float radius = 80 + 40 * sin( frameCount * 0.05f );
+  
+
   fill(217,210,201);
   ellipse(mouseX,mouseY,radius,radius);
   fill(217,210,201); 
