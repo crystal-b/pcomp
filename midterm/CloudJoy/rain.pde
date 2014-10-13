@@ -8,14 +8,15 @@ class circle{
   float yspd;
   float grav;
   color col;
-  float spacing = 15;
+  float spacing = 20;
+  
   // constructor
   circle(){
     xpos = mouseX - 60;
     ypos = mouseY + 30;
     //xspd = mouseX - pmouseX + random(-4, 4);
     //yspd = mouseY - pmouseY;
-    grav= 0.89;
+    grav= .89;
     col = color(random(250), random(250), random(250));
     lifeTime = 250 + random(-50, 50);
   }
@@ -23,7 +24,9 @@ class circle{
   // functions (methods)
   void move(){
     xpos = xpos + grav;
-    ypos = ypos + grav+10;
+    //CRYSTAL CHANGING SPEED OF FALLING RAIN
+    //BUT NOT SPEED OF RAIN COMING OUT OF CLOUD, WHICH CREATES A TRAFFIC JAM
+    ypos = ypos + grav+2;
     //yspd = yspd + grav;
     lifeTime = lifeTime - 4;
      
