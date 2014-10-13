@@ -9,7 +9,8 @@ ArrayList <circle> circles;
 
 
 //CRYSTAL: PLAYING WITH CLOUD BREATHING
-float m = second();
+//int cloudHeight = 45;
+  
 
 //import ddf.minim.*;
 
@@ -31,6 +32,10 @@ void setup()
 
 void draw()
 {
+  //CRYSTAL PLAYING WITH CLOUD BREATH
+  //http://cs.smith.edu/dftwiki/index.php/Creating_a_trail_of_moving_object_in_Processing
+  //float radius = 80 + 40 * sin( frameCount * 0.05f );
+
    
   //colorMode(HSB,360,100,100);
   
@@ -44,12 +49,7 @@ void draw()
   background(60,72,95);
   }
   
-  //testing cloud breath
-  if (m%2 == 0)
   createCloud();
-  else
-  createCloud2();
-
   
   //Making rain
   for(int i = 0; i < circles.size(); i = i + 1){
@@ -111,18 +111,20 @@ println("Im in Serial event - Port: "+myPort);
 //CRYSTAL: PLAYING WITH CLOUD BREATHING
 void createCloud()
 {
-  fill(217,210,201);
-  ellipse(mouseX,mouseY,50,50);
-  fill(217,210,201); 
-  ellipse(mouseX+3,mouseY+15,50,50);
-  ellipse(mouseX-18,mouseY-18,50,50);
-  fill(/*cloudColor*/169,156,146);
   
-  ellipse(mouseX-28,mouseY+15,50,50);
-  ellipse(mouseX-25,mouseY+15,50,50);
-  ellipse(mouseX+15,mouseY+15,50,50);
-  ellipse(mouseX+10,mouseY-11,50,50);
-  ellipse(mouseX-55,mouseY+5,50,50);
+  //CRYSTAL PLAYING WITH CLOUD BREATH
+  //http://cs.smith.edu/dftwiki/index.php/Creating_a_trail_of_moving_object_in_Processing
+  fill(217,210,201);
+  ellipse(mouseX,mouseY,radius,radius);
+  fill(217,210,201); 
+  ellipse(mouseX+3,mouseY+15,radius,radius);
+  ellipse(mouseX-18,mouseY-18,radius,radius);
+  fill(/*cloudColor*/169,156,146);
+  ellipse(mouseX-28,mouseY+15,radius,radius);
+  ellipse(mouseX-25,mouseY+15,radius,radius);
+  ellipse(mouseX+15,mouseY+15,radius,radius);
+  ellipse(mouseX+10,mouseY-11,radius,radius);
+  ellipse(mouseX-55,mouseY+5,radius,radius);
 }
 
 //CRYSTAL: PLAYING WITH CLOUD BREATHING
