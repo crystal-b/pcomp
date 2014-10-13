@@ -103,7 +103,7 @@ void createCloud()
 {
   //CRYSTAL PLAYING WITH CLOUD BREATH
   //http://cs.smith.edu/dftwiki/index.php/Creating_a_trail_of_moving_object_in_Processing
-  float radius = 80 + 40 * sin( frameCount * 0.05f );
+  float radius = 70 + 5 * sin( frameCount * 0.05f );
   
 
   fill(217,210,201);
@@ -114,7 +114,7 @@ void createCloud()
   fill(/*cloudColor*/169,156,146);
   ellipse(mouseX-28,mouseY+15,radius,radius);
   ellipse(mouseX-25,mouseY+15,radius,radius);
-  ellipse(mouseX+15,mouseY+15,radius,radius);
+  ellipse(mouseX+30,mouseY+15,radius,radius);
   ellipse(mouseX+10,mouseY-11,radius,radius);
   ellipse(mouseX-55,mouseY+5,radius,radius);
 }
