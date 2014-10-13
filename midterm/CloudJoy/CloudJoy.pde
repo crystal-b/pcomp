@@ -9,8 +9,7 @@ ArrayList <circle> circles;
 
 //import ddf.minim.*;
 
-void setup()
-{ 
+void setup(){ 
   circles = new ArrayList();
   
   for(int i = 0; i < 100; i = i + 1){
@@ -20,23 +19,27 @@ void setup()
   //String portName = "/dev/tty.usbmodem1411";
   //myPort = new Serial(this, portName, 9600);
   //myPort.bufferUntil('\n');
-}
+  }
 
 }
 
 
-void draw()
-{  
+void draw() {  
   //colorMode(HSB,360,100,100);
+  //CRYSTAL PLAYING AROUND WITH TRAILS
+  //http://cs.smith.edu/dftwiki/index.php/Creating_a_trail_of_moving_object_in_Processing
+  //create transparent background to fade old drawings
+  noStroke();
+  fill( 0xee, 0xee, 0xff, 255);
+  rect(0, 0, width, height);
   
   background(238,72,95);
   noStroke();
   
-  if(thunderStrike>=thunderThreshold)
-  {
-  background(60,72,95);
-  background(0); 
-  background(60,72,95);
+  if(thunderStrike>=thunderThreshold) {
+    background(60,72,95);
+    background(0); 
+    background(60,72,95);
   }
   
   createCloud();
