@@ -7,10 +7,16 @@ float thunderStrike;
 float cloudColor;
 ArrayList <circle> circles;
 
+//shiffmanRain
+Drop[] drops;       // An array of drop objects
+int totalDrops = 0; // totalDrops
+
 //import ddf.minim.*;
 
 void setup(){ 
   circles = new ArrayList();
+  //shiffmanRain
+  drops = new Drop[1000];    // Create 1000 spots in the array
   
   for(int i = 0; i < 100; i = i + 1){
      circles.add(new circle() );
@@ -61,6 +67,26 @@ void draw() {
      circles.add( new circle() );
    }
   }
+  
+  /*
+  //shiffmanRain
+  // Initialize one drop
+    drops[totalDrops] = new Drop();
+    // Increment totalDrops
+    totalDrops ++ ;
+    // If we hit the end of the array
+    if (totalDrops >= drops.length) {
+      totalDrops = 0; // Start over
+    }
+  // Move and display all drops
+  for (int i = 0; i < totalDrops; i++ ) {
+    drops[i].move();
+    drops[i].display();
+    //if (catcher.intersect(drops[i])) {
+     // drops[i].caught();
+    //}
+  }
+  */
   
 }
 
