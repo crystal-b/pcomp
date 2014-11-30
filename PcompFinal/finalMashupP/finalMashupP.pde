@@ -47,14 +47,14 @@ int loc3Y = 400;
 int loc4X = 215;
 int loc4Y = 110;
 color c = 255;
-int lightLimit1 = 0;
-int lightLimit2 = 0;
-int lightLimit3 = 0;
-int lightLimit4 = 0;
+int lightLimit1 = 225;
+int lightLimit2 = 225;
+int lightLimit3 = 225;
+int lightLimit4 = 200;
 
 void setup() {
   //SERIAL COMMUNICATION
-  String portName = "/dev/tty.usbmodem1421";
+  String portName = "/dev/tty.usbmodem1411";
   myPort = new Serial(this, portName, 9600);
   myPort.bufferUntil('\n');
   
@@ -126,19 +126,21 @@ class Button {
 }
 
 void playString() {
-  if (stringPlucked1 > 850) {
+  if (stringPlucked1 > lightLimit1) {
+  }
+  else if (stringPlucked1 < lightLimit1) {
     loc1.rewind();
     loc1.play();
   }
-  else if (stringPlucked2 > 150) {
+  else if (stringPlucked2 < lightLimit2) {
     loc2.rewind();
     loc2.play();
   }
-  else if (stringPlucked3 > 700) {
+  else if (stringPlucked3 < lightLimit3) {
     loc3.rewind();
     loc3.play();
   }
-  else if (stringPlucked4 > 300) {
+  else if (stringPlucked4 < lightLimit4) {
     loc4.rewind();
     loc4.play();
     //loc4.setGain(12.0);
